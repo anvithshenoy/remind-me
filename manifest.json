@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Reminder Notifier",
+  "version": "1.0",
+  "description": "Reminds you of something at intervals and on browser start.",
+  "permissions": ["notifications", "storage", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "Reminder Extension"
+  },
+  "icons": {
+    "128": "icon.png"
+  }
+}
