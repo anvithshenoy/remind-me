@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Reminder Notifier</title>
+		<style>
+			body {
+				font-family: Arial;
+				padding: 10px;
+			}
+			ul {
+				padding-left: 20px;
+			}
+			li {
+				margin-bottom: 10px;
+			}
+			label {
+				display: block;
+				margin-top: 10px;
+			}
+			.mute-checkbox {
+				margin-left: 8px;
+				vertical-align: middle;
+			}
+		</style>
+	</head>
+	<body>
+		<h2>Reminders</h2>
+		<label
+			><input type="checkbox" id="globalMuteCheckbox" /> Mute All
+			Reminders</label
+		>
+		<ul id="reminderList"></ul>
+
+		<h3>Add Reminder</h3>
+		<form id="addForm">
+			<label>Message: <input type="text" id="messageInput" required /></label>
+			<label
+				>Interval (minutes):
+				<input type="number" id="intervalInput" min="1" required
+			/></label>
+			<label
+				>Sound:
+				<select id="soundInput">
+					<option value="">No sound</option>
+					<option value="sounds/default.mp3">Default</option>
+					<option value="sounds/alert.mp3">Alert</option>
+				</select>
+			</label>
+			<label><input type="checkbox" id="muteInput" /> Mute</label>
+			<button type="submit">Add</button>
+		</form>
+		<script src="popup.js"></script>
+	</body>
+</html>
