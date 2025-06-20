@@ -1,24 +1,24 @@
 {
-	"manifest_version": 3,
-	"name": "Reminder Notifier",
-	"version": "1.0",
-	"description": "Notify yourself with reminders and optional sounds.",
-	"permissions": ["storage", "alarms", "notifications"],
-	"host_permissions": [],
-	"background": {
-		"service_worker": "background.js"
-	},
-	"action": {
-		"default_popup": "popup.html",
-		"default_icon": "icon.png"
-	},
-	"icons": {
-		"128": "icon.png"
-	},
-	"web_accessible_resources": [
-		{
-			"resources": ["sounds/*.mp3"],
-			"matches": ["<all_urls>"]
-		}
-	]
+  "manifest_version": 3,
+  "name": "Reminder Notifier",
+  "version": "1.0",
+  "description": "Notify yourself with reminders and optional sounds.",
+  "permissions": ["storage", "alarms", "notifications", "offscreen"],
+  "host_permissions": [],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "icons": {
+    "128": "icon.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["sounds/*.mp3"],
+      "matches": ["<all_urls>"]
+    }
+  ]
 }
